@@ -1,11 +1,11 @@
+import { Link } from 'react-router-dom'
 import './navbar.css'
+
 
 export default function NavBar() {
   return (
-    <header>
-      <div className='header_title'>Unsplash ReactJS</div>
-      <nav>
-      </nav>
-    </header>
+    <nav className='navbar'>
+      <Link to='/' className='navbar-title'>Unsplash</Link>
+    </nav>
   )
 }

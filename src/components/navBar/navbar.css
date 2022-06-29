@@ -1,4 +1,18 @@
-.header_title {
-  font-family: 'Montserrat', sans-serif;
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 5rem;
+}
+
+.navbar a {
+  color: white;
+}
+
+.navbar-title {
+  text-decoration: none;
   font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
