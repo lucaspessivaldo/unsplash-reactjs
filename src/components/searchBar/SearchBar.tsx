@@ -1,7 +1,20 @@
+import React, { Dispatch } from 'react'
 import { BiSearch } from 'react-icons/bi'
 import './searchbar.css'
 
-export default function SearchBar() {
+type MainProps = {
+  searchItemInput: string;
+  setSearchItemInput: React.Dispatch<React.SetStateAction<string>>;
+  //setSearchItemInput: (value: string) => void;
+}
+
+export default function SearchBar(props: MainProps) {
+  function enterHandle(event: React.KeyboardEvent) {
+    if (event.key === 'Enter') {
+      console.log('right')
+    }
+  }
+
   return (
     <div className='searchbar-container'>
       <div className='searchbar-box'>
@@ -13,6 +26,7 @@ export default function SearchBar() {
           id='searchbar-input'
           type="text"
           placeholder='Search photos'
+          onKeyDown={enterHandle}
         />
       </div>
     </div>
