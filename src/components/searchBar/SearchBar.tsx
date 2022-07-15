@@ -27,6 +27,7 @@ export default function SearchBar(props: MainProps) {
           type="text"
           placeholder='Search photos'
           onKeyDown={enterHandle}
+          onChange={e => props.setSearchItemInput(e.target.value)}
         />
       </div>
     </div>
